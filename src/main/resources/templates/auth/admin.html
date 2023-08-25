@@ -52,8 +52,7 @@
     <header>
         <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
             <div class="container-fluid jc-center justify-content-center">
-                <div class="collapse navbar-collapse"
-                ">
+                <div class="collapse navbar-collapse">
                 <ul class="me-auto d-flex align-items-center">
                     <li class="text-white me-auto item">
                         <strong class="text-white" th:utext="${admin.getName()}">
@@ -88,7 +87,7 @@
                             </a>
                         </li>
                         <li class="nav-item  p-0">
-                            <a href="#" class="nav-link link-dark">
+                            <a th:href="@{/user}" class="nav-link link-dark">
                                 User
                             </a>
                         </li>
@@ -111,7 +110,7 @@
                             <button class="nav-link" id="newUser-tab" data-bs-toggle="tab"
                                     data-bs-target="#newUser" type="button" role="tab" aria-controls="newUser"
                                     aria-selected="true">
-                                New user
+                                <a class="nav-link" href="auth/registration">New User</a>
                             </button>
                         </li>
                     </ul>
